@@ -22,9 +22,13 @@ public class QPjtStfOview extends EntityPathBase<PjtStfOview> {
 
     public static final QPjtStfOview pjtStfOview = new QPjtStfOview("pjtStfOview");
 
-    public final StringPath mdfyUsrId = createString("mdfyUsrId");
+    public final com.tysystems.pms.domain.entity.common.QBaseEntity _super = new com.tysystems.pms.domain.entity.common.QBaseEntity(this);
 
-    public final StringPath mdfyYmd = createString("mdfyYmd");
+    //inherited
+    public final StringPath mdfyUsrId = _super.mdfyUsrId;
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> mdfyYmd = _super.mdfyYmd;
 
     public final QPjt pjt;
 
@@ -42,9 +46,11 @@ public class QPjtStfOview extends EntityPathBase<PjtStfOview> {
 
     public final StringPath putStaCd = createString("putStaCd");
 
-    public final StringPath regUsrId = createString("regUsrId");
+    //inherited
+    public final StringPath regUsrId = _super.regUsrId;
 
-    public final StringPath regYmd = createString("regYmd");
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> regYmd = _super.regYmd;
 
     public final com.tysystems.pms.domain.entity.usr.QUsr usr;
 

@@ -3,7 +3,7 @@ server:
     session:
       tracking-modes: cookie
       timeout: 10000
-    context-path: '/wbplus'
+    context-path: '/pms'
   port: 8080
 
 spring:

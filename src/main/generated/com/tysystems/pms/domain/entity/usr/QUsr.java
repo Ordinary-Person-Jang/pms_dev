@@ -20,6 +20,8 @@ public class QUsr extends EntityPathBase<Usr> {
 
     public static final QUsr usr = new QUsr("usr");
 
+    public final com.tysystems.pms.domain.entity.common.QBaseEntity _super = new com.tysystems.pms.domain.entity.common.QBaseEntity(this);
+
     public final StringPath blngtCmpnyNm = createString("blngtCmpnyNm");
 
     public final StringPath cellPhoneNo = createString("cellPhoneNo");
@@ -32,11 +34,23 @@ public class QUsr extends EntityPathBase<Usr> {
 
     public final StringPath emailAddr = createString("emailAddr");
 
+    //inherited
+    public final StringPath mdfyUsrId = _super.mdfyUsrId;
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> mdfyYmd = _super.mdfyYmd;
+
     public final StringPath picAtchFileId = createString("picAtchFileId");
 
     public final StringPath pstnCd = createString("pstnCd");
 
     public final StringPath pstnNm = createString("pstnNm");
+
+    //inherited
+    public final StringPath regUsrId = _super.regUsrId;
+
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> regYmd = _super.regYmd;
 
     public final ListPath<com.tysystems.pms.domain.entity.pjt.PjtStfOview, com.tysystems.pms.domain.entity.pjt.QPjtStfOview> stfOviews = this.<com.tysystems.pms.domain.entity.pjt.PjtStfOview, com.tysystems.pms.domain.entity.pjt.QPjtStfOview>createList("stfOviews", com.tysystems.pms.domain.entity.pjt.PjtStfOview.class, com.tysystems.pms.domain.entity.pjt.QPjtStfOview.class, PathInits.DIRECT2);
 

@@ -1,5 +1,6 @@
 package com.tysystems.pms.domain.entity.usr;
 
+import com.tysystems.pms.domain.entity.common.BaseEntity;
 import com.tysystems.pms.domain.entity.pjt.PjtStfOview;
 import jakarta.persistence.*;
 
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Usr {
+public class Usr extends BaseEntity {
     @Id
     @Column(name = "USR_ID")
     private String usrId;

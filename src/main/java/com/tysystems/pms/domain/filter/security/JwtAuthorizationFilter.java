@@ -68,7 +68,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         }
 
         boolean byID = redisRepository.existsById(token);
-
+        log.info("ById  [{}]", byID);
         if(byID) {
             redisRepository.save(new RefreshToken(token, loginId));
             String loginInfoStr = loginId + "::" + pjtId;
@@ -79,7 +79,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
             String suYn="N";
             List<LoginUsrAuthDto> roles = principalDetails.getUsr().getRole();
             for(LoginUsrAuthDto role : roles){
-                log.debug("롤  : " + role);
+//                log.info("롤  : " + role.getAuthority());
                 //관리자 롤이 있는 경우
                 if(Constants.ADMIN_AUTH.equals(role.getAuthority())
                         || Role.PM.name().equals(role.getAuthority())
